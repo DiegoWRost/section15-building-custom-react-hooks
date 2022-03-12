@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 
-import Card from "./Card";
-
 const useCounter = () => {
   const [counter, setCounter] = useState(0);
 
@@ -12,6 +10,8 @@ const useCounter = () => {
 
     return () => clearInterval(interval);
   }, []);
+
+  return counter;
 };
 
 export default useCounter;
